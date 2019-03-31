@@ -98,7 +98,6 @@ class Backpropagation(object):
     
     def activation_function(self, weights, inputs):
         # activation = sum (weight * input node value)
-        # activation = weights[-1] ????? bias where to add the fucking bias?
         activation = inputs.dot(weights)
         return activation
     

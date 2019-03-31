@@ -1,10 +1,4 @@
-"""
-Name: Christina Li
-Student number: 20001595
-Assignment 3: competitive learning artificial neural network Part 2
 
-Overview: 3 features, find 2 clusters, use 2 layer competitive learning
-"""
 import numpy as np
 import pandas as pd
 from mpl_toolkits.mplot3d import Axes3D

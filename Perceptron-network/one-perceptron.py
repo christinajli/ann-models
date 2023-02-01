@@ -1,18 +1,11 @@
 """
-Name: Christina Li
-Student number: 20001595
-Project: Implementing an Artificial Neural Network to Predict Cardiovascular Disease
-
-Overview: using multilayer perceptron to create ANN model
-
+Overview: create ANN model using one perceptron to Predict Cardiovascular Disease
 """
 
 import numpy as np
 import pandas as pd
 import random
 from sklearn.model_selection import train_test_split
-import warnings
-warnings.filterwarnings("ignore")
 
 # ------------------------------------------Data pre-processing------------------------------------- #
 # import data set
@@ -51,16 +44,10 @@ def sigmoid(activation):
 
 
 def weight_init(num_input, num_output):
-    # currently defined with one hidden layer of size num_hidden
-    # w1 = np.random.uniform(low=0, high=1, size=(num_input, num_hidden))
-    # w2 = np.random.uniform(low=0, high=1, size=(num_hidden, num_output))
-
     w1 = np.random.uniform(low=0, high=1, size=(num_input, num_output))
-    return w1  #, w2
+    return w1
 
-
-def perceptron(train_input, train_output):
-    """
+"""
     Perceptron training algorithm:
     start with randomly chosen weight vector w_0
     let k = 1
@@ -73,7 +60,10 @@ def perceptron(train_input, train_output):
     :param train_input: input from data set
     :param train_output: correct/desired output value, 1 have heart disease, 0 no heart disease
     :return: matrix of weights for each layer
-    """
+"""
+
+def perceptron(train_input, train_output):
+
     # constant learning rate to decrease computation expense and avoid being trapped in local minima
     learning_rate = 0.5
     n_epoch = 1
@@ -84,7 +74,6 @@ def perceptron(train_input, train_output):
 
     num_input = len(train_input[0])  # number of input categories
     num_output = len(set(train_output))  # number of output categories
-    # num_hidden = 5  # trial and error for optimum result
 
     # start with randomly chosen weight vector w_0
     w1 = weight_init(num_input, num_output)

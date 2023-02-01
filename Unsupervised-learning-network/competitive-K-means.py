@@ -1,3 +1,6 @@
+"""
+Overview: Competitive K means artificial neural network
+"""
 
 import numpy as np
 import pandas as pd
@@ -78,8 +81,7 @@ def error_calculation(data_set, weights):
             error += np.square(distance(weights[i], input_data))
     return error
 # -----------------------------k-means clustering algorithm--------------------------------- #
-def kmeans (data_set, weights):
-    """
+"""
     Kmeans clustering algorithm pseudo code from textbook
     initialize k prototypes (weight vector)
     each cluster Cj is associated with prototype wj
@@ -92,7 +94,10 @@ def kmeans (data_set, weights):
         end for
         compute E = sum of sum (|il - wj|) ^2
     until E no longer decreases, or cluster memberships stabilize
-    """
+"""
+
+def kmeans (data_set, weights):
+
     current_error = 0
     epoch = 10
     output_set = list()

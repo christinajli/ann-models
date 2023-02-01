@@ -1,3 +1,7 @@
+"""
+Overview: Competitive Kohonen artificial neural network
+"""
+
 import numpy as np
 import pandas as pd
 from mpl_toolkits.mplot3d import Axes3D
@@ -55,9 +59,7 @@ def closest_distance(weight_vector, input_vector):
         node = node + 1
     return winning_weights, winning_node
 
-
-def kohonen(data_set, weights):
-    """
+"""
     Kohonen algorithm pseudo code from textbook
     initialize all weights to random values
     repeat:
@@ -67,7 +69,10 @@ def kohonen(data_set, weights):
         update each weight wj*1,...wj*n using the rule:
         delta_wj*,l = learning rate(t)(ik,l - wj*,l) for l in (1...n)
     until network converges or computational bounds are exceeded
-    """
+"""
+
+def kohonen(data_set, weights):
+
     learning_rate = 0.5
     update_weight = 1
 

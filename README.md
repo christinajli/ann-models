@@ -1,2 +1,2 @@
-# Course-related-projects
-Projects for Algorithm and other software development courses
+# Artificial-neural-network
+Sample implementation of common artificial neural network (ANN) models in python

@@ -1,8 +1,5 @@
-
 """
-Project: Implementing an Artificial Neural Network to Predict Cardiovascular Disease
-Overview: using multilayer perceptron to create ANN model
-
+Overview: Create ANN model using multilayer perceptron to Predict Cardiovascular Disease
 """
 
 import numpy as np
@@ -57,9 +54,7 @@ def weight_init(num_input, num_output, num_hidden):
 
     return w1, w2
 
-
-def perceptron(train_input, train_output):
-    """
+"""
     Perceptron training algorithm:
     start with randomly chosen weight vector w_0
     let k = 1
@@ -72,7 +67,10 @@ def perceptron(train_input, train_output):
     :param train_input: input from data set
     :param train_output: correct/desired output value, 1 have heart disease, 0 no heart disease
     :return: matrix of weights for each layer
-    """
+"""
+
+def perceptron(train_input, train_output):
+
     # constant learning rate to decrease computation expense and avoid being trapped in local minima
     learning_rate = 0.5
     n_epoch = 100

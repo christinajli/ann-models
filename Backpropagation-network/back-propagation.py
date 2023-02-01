@@ -1,6 +1,5 @@
 """
-
-    Assignment 2: backpropagation artificial neural network
+Overview: Backpropagation artificial neural network
 """
 import numpy as np
 import pandas as pd
@@ -53,7 +52,7 @@ X_train, X_validate, y_train, y_validate = train_test_split(X_train, y_train, te
     end for
     end while
     end function back propagation
-    '''
+'''
 
 
 class Backpropagation(object):
